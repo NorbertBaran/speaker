@@ -1,0 +1,1 @@
+export const API='http://3.68.78.96/speaker/api'

@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  speaker-api:
+    image: speaker-api
+    container_name: speaker-api
+    build:
+      context: api
+      dockerfile: Dockerfile
+    ports:
+      - ${API_PORT}:80
+    networks:
+      - speaker
+  
+  speaker-client:
+    image: speaker-client
+    container_name: speaker-client
+    build:
+      context: client
+      args:
+        - CONFIG=${CLIENT_CONFIG}
+      dockerfile: Dockerfile
+    ports:
+      - ${CLIENT_PORT}:80
+    networks:
+      - speaker
+    depends_on:
+      - speaker-api
+
+networks:
+  speaker:

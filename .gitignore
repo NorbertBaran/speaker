@@ -1,0 +1,11 @@
+# couple
+.idea
+.code
+# api
+__pycache__/
+audio.mp3
+api/speaker_credentials.json
+venv/
+# client
+dist
+node_modules
