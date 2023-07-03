@@ -1,1 +1,1 @@
-export const API='http://3.68.78.96/speaker/api'
+export const API='http://quecto.pl/speaker/api'
